@@ -1,0 +1,2 @@
+Google Technology Stack – Python, Java, Android SDK, Go, C++, Preact, Angular JS, Kubernetes, TensorFlow and a host of other Google frameworks.
+
