@@ -154,11 +154,9 @@ let foodArr = [
 //CODE HERE
 // looking for kids tag
 
-const filteredFood = foodArr.filter((tag) => foodArr.tags === tag);
+const filteredFood = foodArr.filter((food) => food.tags.includes("kids"));
 
-console.log(filteredFood("kids"));
-
-console.log(foodArr.tags);
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -192,7 +190,7 @@ console.log(foodArr.tags);
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -200,7 +198,16 @@ console.log(foodArr.tags);
 */
 
 //CODE HERE
-function filterByProperty(property, number, type) {}
+const filterByProperty = (property, number, type) => {
+  let filteredArray = foodArr.filter((food) => {
+    if (type === `above`) {
+      return food[property] > number;
+    } else {
+      return food[property] < number;
+    }
+  });
+  return filteredArray;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -210,4 +217,5 @@ function filterByProperty(property, number, type) {}
 */
 
 //CODE HERE
-console.log(filterByProperty());
+console.log(filterByProperty("price", 9, "above"));
+console.log(filterByProperty("popularity", 9, "above"));

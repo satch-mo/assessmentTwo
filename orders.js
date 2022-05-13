@@ -56,9 +56,9 @@ class Ticket {
 */
 
 //CODE HERE
-let firstTicket = new Ticket(`Pizza, bread, and soda`, `7:03 pm`, 575);
+let firstTicket = new Ticket([`Pizza`, `bread`, `soda`], `7:03 pm`, 575); // edited code during review to split string of food items into array of individual food items -- will be helpful when adding other items -- otherwise, i was able to complete this page during the assessment!
 
-// console.log(firstTicket);
+console.log(firstTicket);
 
 /*
     Call the `updateStatus` method on
@@ -68,3 +68,4 @@ let firstTicket = new Ticket(`Pizza, bread, and soda`, `7:03 pm`, 575);
 
 //CODE HERE
 firstTicket.updateStatus(`cooking`);
+firstTicket.updateStatus(`done`); // optional second updating status

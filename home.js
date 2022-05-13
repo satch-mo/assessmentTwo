@@ -21,10 +21,9 @@
 */
 
 //CODE HERE
-const greetUser = (username) => `Welcome back, ${username}`;
+const greetUser = (username) => console.log(`Welcome back, ${username}`);
 
-// console.log(greetUser(`Andrew`));
-
+greetUser(`Andrew`);
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -78,14 +77,16 @@ const canWeDeliver = (zipCode) => {
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+// // CODE HERE
 // const canWeDeliverTwo = (zipCode) => {
-//     for (let index in deliveryAreaZipCodes) {
-//         index ===
+//     for (let i = 0; i< deliveryAreaZipCodes.length; i++) {
+//        if (deliveryAreaZipCodes[i] === zipCode) {
+//     return console.log(`We can deliver to you!`)
 //     }
+//     return console.log(`Sorry, we can't deliver to that address`)
 // };
 
-// console.log(canWeDeliver(85203));
+// canWeDeliver(85203);
 // console.log(canWeDeliver(85233));
 
 //////////////////PROBLEM 3////////////////////
@@ -123,9 +124,8 @@ const deals = [
 
 //CODE HERE
 
-let newDeals = deals.map(replace("15", "10"));
-
-console.log(newDeals);
+deals[0].title = deals[0].title.replace("15", "10");
+// console.log(deals);
 
 /*
     The restaurant is going to continue its
@@ -142,5 +142,6 @@ console.log(newDeals);
 
 //CODE HERE
 
-let newMonth = deals.title.replace("March", "April");
+deals[1].desc = deals[1].desc.replace("March", "April").trim();
+
 console.log(deals);

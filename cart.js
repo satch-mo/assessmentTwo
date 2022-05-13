@@ -33,9 +33,9 @@ const cart = [
 ];
 
 //CODE HERE
-// function()
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0); //curr.price & starting at 0 is important
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -53,6 +53,11 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+  return cartTotal * tax + (cartTotal - couponValue);
+}
+
+console.log(calcFinalPrice(10, 2, 0.25));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -76,6 +81,7 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    I think it would be a good idea to have the customer's name (string, number), credit card type (string), address (string), phone number (string) to have on file as reference. Lastly, a boolean stating whether or not they normally request red peppers and parmesan with their orders!
 
 */
 
@@ -85,3 +91,10 @@ const cart = [
 */
 
 //CODE HERE
+const cust1 = {
+  name: "Sandra D.",
+  card: "amex",
+  address: "10835 white oak pt. cypress, tx",
+  phone: `(832)237-2654`,
+  peppersAndParm: true,
+};
