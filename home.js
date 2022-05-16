@@ -124,7 +124,7 @@ const deals = [
 
 //CODE HERE
 
-deals[0].title = deals[0].title.replace("15", "10");
+deals[0].title = deals[0].title.replace("15", "10"); // makes so much sense to read it this way!!
 // console.log(deals);
 
 /*
